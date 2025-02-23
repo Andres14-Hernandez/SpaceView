@@ -1,7 +1,10 @@
 function Home(){
     return(
         <section>
-            <h1>Home</h1>
+            <h1>Photo of the day</h1>
+            <div>
+                <img src="/" alt="imagen"/>
+            </div>
         </section>
     )
 } 

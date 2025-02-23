@@ -2,3 +2,21 @@
     height: 100vh;
     width: 20%;
 }
+
+.list{
+    list-style: none;
+    padding: 50px;
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.list a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 35px;
+}
