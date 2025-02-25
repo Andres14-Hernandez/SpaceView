@@ -1,0 +1,12 @@
+.APODcontainer{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.APODcontainer img{
+    max-height: 60vh;
+    object-fit: contain;
+    border-radius: 15px;
+}

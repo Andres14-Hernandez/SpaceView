@@ -1,8 +1,15 @@
 import styles from './Images.module.css'
+import useFetch from '../../Assets/useFetch'
+
 
 function Images() {
+    
+
+
     return(
-        <h1>Images</h1>
+        <section>
+            <h1 className={styles.title}>Images</h1>
+        </section>
     )
 }
 
