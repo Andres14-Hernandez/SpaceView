@@ -1,20 +1,20 @@
 import { useState, useEffect } from "react";
 
-function useFetcher(url) {
+function useAPOD() {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
     useEffect(() => {
         setLoading(true);
-        fetch(url)
+        fetch("https://api.nasa.gov/planetary/apod?api_key=jeMDXFr43KgQ3ubJr9CvCJl4wgdjMfyjrF20CUHA")
             .then((response) => response.json())
             .then((data) => setData(data))
             .catch((error) => setError(error))
             .finally(() => setLoading(false));
-    }, [url]);
+    }, []);
 
     return { data, loading, error };
 }
 
-export default useFetcher;
+export default useAPOD;

@@ -1,10 +1,10 @@
 import styles from './Home.module.css'
-import useFetch from '../../Assets/useFetch'
+import useFetch from '../../Assets/useAPOD'
 
 
 function Home(){
-    const apiKey = 'jeMDXFr43KgQ3ubJr9CvCJl4wgdjMfyjrF20CUHA'
-    const { data, loading, error } = useFetch(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
+
+    const { data, loading, error } = useFetch()
 
     return(
         <section>
