@@ -1,0 +1,32 @@
+.fromContainer{
+    padding: 30px 0px;
+}
+
+.form{
+    display: flex;
+    gap: 40px;
+}
+
+.form input{
+    padding: 20px;
+    color: var(--text-color);
+    background-color: var(--asset-color);
+    width: 80%;
+    font-size: 20px;
+}
+
+.select{
+    padding: 20px;
+    width: 10%;
+    color: var(--text-color);
+    background-color: var(--asset-color);
+    font-size: 20px;
+}
+
+.button{
+    padding: 20px;
+    width: 10%;
+    background-color: var(--asset-color);
+    color: var(--text-color);
+    font-size: 20px;
+}

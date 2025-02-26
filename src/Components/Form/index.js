@@ -14,21 +14,25 @@ function Form( {onSearch} ){
     };
   
     return (
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Escribe una palabra clave..."
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-        />
-  
-        <select value={mediaType} onChange={(e) => setMediaType(e.target.value)}>
-          <option value="image">Imágenes</option>
-          <option value="video">Videos</option>
-        </select>
-  
-        <button type="submit">Buscar</button>
-      </form>
+      <div className={styles.fromContainer}>
+        <form onSubmit={handleSubmit} className={styles.form}>
+          <input
+            type="text"
+            placeholder="Explore the universe..."
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
+
+          <select value={mediaType} onChange={(e) => setMediaType(e.target.value)} className={styles.select} >
+            <option value="image">Images</option>
+            <option value="video">Videos</option>
+          </select>
+      
+          <button type="submit" className={styles.button}>
+            Search
+          </button>
+        </form>
+      </div>
     );
 
 }

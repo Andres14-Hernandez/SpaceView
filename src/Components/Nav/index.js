@@ -9,7 +9,7 @@ function Nav(){
                     <Link to='/'> Home </Link> 
                 </li>
                 <li>
-                    <Link to='/images'> Images </Link> 
+                    <Link to='/images'> Galery </Link> 
                 </li>
                 <li>
                     <Link to='/videos'> Videos </Link> 
