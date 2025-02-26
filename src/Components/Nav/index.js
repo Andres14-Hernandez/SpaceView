@@ -11,9 +11,9 @@ function Nav(){
                 <li>
                     <Link to='/images'> Galery </Link> 
                 </li>
-                <li>
+                {/* <li>
                     <Link to='/videos'> Videos </Link> 
-                </li>
+                </li> */}
                 
             </ul>
         </nav>

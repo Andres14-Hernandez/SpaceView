@@ -12,7 +12,7 @@ function AppRoutes(){
                 <Route path="/" element={ <BasePage/> }>
                     <Route index="/home" element={ <Home/> }/>
                     <Route path="/images" element={ <Galery/> }/>
-                    <Route path="/videos" element={ <Videos/> }/>
+                    {/* <Route path="/videos" element={ <Videos/> }/> */}
                     <Route path="*" element={ <NotFound/> }/>
                 </Route>
             </Routes>
