@@ -1,16 +1,12 @@
 import styles from './Form.module.css'
-import { useState } from "react";
 
 
 
 function Form( {onSearch} ){
 
-    const [query, setQuery] = useState(""); 
-    const [mediaType, setMediaType] = useState("image"); 
   
     const handleSubmit = (e) => {
       e.preventDefault();
-      onSearch(query, mediaType);
     };
   
     return (
@@ -19,11 +15,11 @@ function Form( {onSearch} ){
           <input
             type="text"
             placeholder="Explore the universe..."
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
+            value={"zcd"}
+            onChange={"dffsa"}
           />
 
-          <select value={mediaType} onChange={(e) => setMediaType(e.target.value)} className={styles.select} >
+          <select value={"zff"} onChange={"asa"} className={styles.select} >
             <option value="image">Images</option>
             <option value="video">Videos</option>
           </select>

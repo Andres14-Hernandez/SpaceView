@@ -7,6 +7,7 @@
 
 .APODcontainer img{
     max-height: 60vh;
+    max-width: 60%;
     object-fit: contain;
     border-radius: 15px;
 }

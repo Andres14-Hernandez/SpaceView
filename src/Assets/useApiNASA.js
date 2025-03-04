@@ -1,13 +1,54 @@
+import { useState, useEffect } from 'react';
 
-export async function ApiNASA(query, mediaType = "image") {
-    try {
-      const response = await fetch(`https://images-api.nasa.gov/search?q=${query}&media_type=${mediaType}`);
-      if (!response.ok) throw new Error("Error al obtener los datos");
-      const data = await response.json();
-      return data.collection.items;
-    } catch (error) {
-      console.error("Error en la API:", error);
-      return [];
-    }
-  }
-  
+function useApiNASA(props={}){
+    const [items, setItems] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    // Destructuramos props con valores por defecto
+    
+    const {
+        query = 'moon',
+        mediaType = 'image',
+        yearStart = '',
+        yearEnd = '',
+        page = 1,
+        pageSize = 10
+    } = props;
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                let apiUrl = `https://images-api.nasa.gov/search?q=${query}&media_type=${mediaType}&page=${page}&page_size=${pageSize}`;
+                
+                if(yearStart) apiUrl += `&year_start=${yearStart}`;
+                if(yearEnd) apiUrl += `&year_end=${yearEnd}`;
+
+                const response = await fetch(apiUrl);
+                if(!response.ok) throw new Error('Error en la respuesta');
+                
+                const data = await response.json();
+                
+                const formattedItems = data.collection.items.map(item => ({
+                    title: item.data[0]?.title || 'Sin título',
+                    description: item.data[0]?.description || 'Descripción no disponible',
+                    href: item.links?.[0]?.href || '',
+                    date: item.data[0]?.date_created || 'Fecha desconocida',
+                    nasaId: item.data[0]?.nasa_id || ''
+                }));
+                
+                setItems(formattedItems);
+                setLoading(false);
+            } catch (error) {
+                setError(error.message);
+                setLoading(false);
+            }
+        };
+
+        fetchData();
+    }, [query, mediaType, yearStart, yearEnd, page, pageSize]);
+
+    return { items, loading, error };
+};
+
+export default useApiNASA;

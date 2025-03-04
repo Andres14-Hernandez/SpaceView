@@ -1,53 +1,34 @@
 import styles from './Images.module.css'
-import { useState, useEffect } from "react";
-import { ApiNASA } from "../../Assets/useApiNASA";
 import Form from '../../Components/Form'
+import Card from '../../Components/Card';
+import useApiNASA  from "../../Assets/useApiNASA.js";
 
 
-function Galery() {
-    
-    const [images, setImages] = useState([]);
+function Galery(props) {
 
-    useEffect(() => {
-        ApiNASA("mars").then(setImages);
-      }, []);
+    const { items, loading, error } = useApiNASA(props);
 
-    const [results, setResults] = useState([]);
+    if(loading) return <div className="loading">Cargando datos de la NASA...</div>;
+    if(error) return <div className="error"> Error: {error}</div>;
 
-    const handleSearch = async (query, mediaType) => {
-        if (!query) return;
-        const fetchedResults = await ApiNASA(query, mediaType);
-        setResults(fetchedResults);
-      };
-
-    useEffect(() => {
-      handleSearch("Earth", "image");
-    }, []);
 
 
     return(
         <section>
             <h1 className={styles.title}>Images</h1>
-                <Form onSearch={handleSearch} />
+                <Form />
 
-            <div  className={styles.galery}>
-              {results.length > 0 ? (
-                results.map((item, index) => (
-                  <div key={index}>
-                    {item.links ? (
-                      <img src={item.links[0].href} alt={item.data[0].title} width="200px" />
-                    ) : (
-                      <video width="200px" controls>
-                        <source src={item.href} type="video/mp4" />
-                        This bowser does not support the video tag.
-                      </video>
-                    )}
-                  </div>
-                ))
-              ) : (
-                <p>Not results</p>
-              )}
-            </div>
+            <ul className={styles.galery}>
+                {items.map((item) => (
+                    <Card
+                        key={item.nasaId}
+                        title={item.title}
+                        description={item.description}
+                        imageUrl={item.href}
+                        date={item.date}
+                    />
+                ))}
+            </ul>
         </section>
     )
 }
