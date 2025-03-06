@@ -1,4 +1,4 @@
-import styles from './Images.module.css'
+import styles from './Galery.module.css'
 import Form from '../../Components/Form'
 import Card from '../../Components/Card';
 import useApiNASA  from "../../Assets/useApiNASA.js";
@@ -25,7 +25,6 @@ function Galery(props) {
                         title={item.title}
                         description={item.description}
                         imageUrl={item.href}
-                        date={item.date}
                     />
                 ))}
             </ul>

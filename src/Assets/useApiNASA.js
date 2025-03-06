@@ -10,19 +10,14 @@ function useApiNASA(props={}){
     const {
         query = 'moon',
         mediaType = 'image',
-        yearStart = '',
-        yearEnd = '',
         page = 1,
-        pageSize = 10
+        pageSize = 30
     } = props;
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 let apiUrl = `https://images-api.nasa.gov/search?q=${query}&media_type=${mediaType}&page=${page}&page_size=${pageSize}`;
-                
-                if(yearStart) apiUrl += `&year_start=${yearStart}`;
-                if(yearEnd) apiUrl += `&year_end=${yearEnd}`;
 
                 const response = await fetch(apiUrl);
                 if(!response.ok) throw new Error('Error en la respuesta');
@@ -46,7 +41,7 @@ function useApiNASA(props={}){
         };
 
         fetchData();
-    }, [query, mediaType, yearStart, yearEnd, page, pageSize]);
+    }, [query, mediaType, page, pageSize]);
 
     return { items, loading, error };
 };
