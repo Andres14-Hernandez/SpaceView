@@ -33,7 +33,7 @@ const useApiNASA = (props = {}) => {
                 setLoading(true);
                 setError(null);
                 
-                const apiUrl = `https://images-api.nasa.gov/search?q=${query}&media_type=${mediaType}&page=${page}&page_size=${pageSize}`;
+                const apiUrl = `https://images-api.nasa.gov/search?q=${query}&media_type=image&page=${page}&page_size=${pageSize}`;
                 const response = await fetch(apiUrl);
                 
                 if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);

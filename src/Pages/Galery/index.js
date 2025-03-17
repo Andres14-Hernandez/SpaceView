@@ -19,7 +19,7 @@ function Galery() {
 
     return(
         <section>
-            <h1 className={styles.title}>Galery</h1>
+            <h1 className={styles.title}>Images</h1>
                 <Form onSearch={handleSearch} />
 
             <ul className={styles.galery}>
