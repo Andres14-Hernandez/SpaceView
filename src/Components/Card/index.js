@@ -2,7 +2,7 @@ import styles from './Card.module.css'
 import { useState } from 'react';
 
 
-function Modal({ title, description, imageUrl, mediaType, videoFiles, onClose }){
+function Modal({ title, description, imageUrl, onClose }){
   return (
     <div className={styles.modalOverlay} onClick={onClose}>
       <div className={styles.modalContainer} onClick={(e) => e.stopPropagation()}>

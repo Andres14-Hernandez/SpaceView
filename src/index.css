@@ -31,6 +31,21 @@ h1, h2, h3 ,h4 ,h5 h6{
   font-size: 60px;
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: var(--asset-color);
+}
+::-webkit-scrollbar-thumb {
+  background: #00899b;
+  border-radius: 3px;
+  
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--title-color);
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
