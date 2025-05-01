@@ -29,7 +29,6 @@ function Galery() {
                         title={item.title}
                         description={item.description}
                         imageUrl={item.mediaUrl}
-                        videoFiles={item.videoFiles || []}
                     />
                 ))}
             </ul>

@@ -27,15 +27,6 @@ function Form( {onSearch} ){
             value={query}
             onChange={(e) => setQuery(e.target.value)}
           />
-
-          {/* <select 
-            value={mediaType} 
-            onChange={(e) => setMediaType(e.target.value)} 
-            className={styles.select} 
-          >
-            <option value="image">Images</option>
-            <option value="video">Videos</option>
-          </select> */}
       
           <button type="submit" className={styles.button}>
             Search

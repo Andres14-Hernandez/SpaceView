@@ -9,24 +9,29 @@
 
 .form input{
     padding: 20px;
+    border: solid 2px transparent;
+    border-radius: 10px;
     color: var(--text-color);
     background-color: var(--asset-color);
-    width: 80%;
+    width: 90%;
     font-size: 20px;
 }
 
-.select{
-    padding: 20px;
-    width: 10%;
-    color: var(--text-color);
-    background-color: var(--asset-color);
-    font-size: 20px;
+.form input:focus{
+    outline: none;
+    border: solid 2px var(--title-color);
 }
 
 .button{
     padding: 20px;
-    width: 10%;
+    width: 15%;
     background-color: var(--asset-color);
     color: var(--text-color);
     font-size: 20px;
+    border-radius: 10px;
+}
+
+.button:hover{
+    outline: none;
+    border: solid 2px var(--title-color);
 }
