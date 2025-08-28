@@ -6,7 +6,6 @@ import { useState } from 'react';
 function Form( {onSearch} ){
 
   const [query, setQuery] = useState('');
-  const [mediaType, /* setMediaType */] = useState('image');
   
     const handleSubmit = (e) => {
       e.preventDefault();
@@ -15,7 +14,7 @@ function Form( {onSearch} ){
         alert('Special characters are not allowed');
         return;
       }
-      onSearch({ query, mediaType });
+      onSearch({ query });
     };  
   
     return (

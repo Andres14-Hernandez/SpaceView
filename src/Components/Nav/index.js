@@ -3,21 +3,25 @@ import {Link} from 'react-router-dom'
 
 function Nav(){
     return(
-        <nav className={styles.nav}>
-
-            <div className={styles.logo}>
+    <nav className={styles.nav}>
+        
+        <ul className={styles.list}>
+            <li>
                 <Link to='/'> 
-                    <img src='/images/logo-SpaceView.png' alt='logo' /> 
-                </Link>           
-            </div>
+                    <img className={styles.logo} src='/images/logo-SpaceView.png' alt='logo' /> 
+                </Link> 
+            </li>
 
-            <ul className={styles.list}>
-                <li>
-                    <Link to='/images'> Images </Link> 
-                </li>                
-            </ul>
+            <li>
+                <Link to='/images'> IMAGES </Link> 
+            </li>  
             
-        </nav>
+            <li>
+                <Link to='#'> TEST </Link> 
+            </li>               
+        </ul>
+            
+    </nav>
     )
 }
 

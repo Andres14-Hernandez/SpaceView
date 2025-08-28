@@ -9,23 +9,8 @@ const useApiNASA = (props = {}) => {
         query = '',
         mediaType = 'image',
         page = 1,
-        pageSize = 30
+        pageSize = 51
     } = props;
-
-    // Función para obtener archivos de video
-    const getVideoFiles = async (collectionUrl) => {
-        try {
-          const response = await fetch(collectionUrl);
-          const data = await response.json();
-
-          return Array.isArray(data) 
-            ? data.filter(link => link.includes('.mp4'))
-            : [];
-        } catch (error) {
-          console.error("Error fetching video links:", error);
-          return [];
-        }
-      };
 
     useEffect(() => {
         const fetchData = async () => {
@@ -48,14 +33,7 @@ const useApiNASA = (props = {}) => {
                             mediaUrl: item.links?.[0]?.href || '',
                             mediaType: item.data[0]?.media_type || 'image',
                             nasaId: item.data[0]?.nasa_id || '',
-                            videoFiles: []
                         };
-
-                        // Obtener enlaces de video si es necesario
-                        if (baseData.mediaType === 'video' && item.href) {
-                            baseData.videoFiles = await getVideoFiles(item.href);
-                        }
-
                         return baseData;
                     })
                 );

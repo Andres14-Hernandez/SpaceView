@@ -7,7 +7,7 @@ import { useState } from 'react';
 
 function Galery() {
 
-    const [searchParams, setSearchParams] = useState({ query: '', mediaType: 'image' });
+    const [searchParams, setSearchParams] = useState({ query: '' });
     const { items, loading, error } = useApiNASA(searchParams);
   
     const handleSearch = (params) => {

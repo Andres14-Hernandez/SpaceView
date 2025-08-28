@@ -8,18 +8,18 @@
 
 :root{
   --title-color: #1ECBE1;
-  --text-color: #d0d0d0;
+  --text-color: #c4c3c3;
   --back-color: #012340;
   --asset-color: #233a4c;
 }
 
 
 body{
-  font-size: 27px;
+  font-size: 25px;
   font-weight: 400;
   font-style: normal;
   color: var(--text-color);
-  background: linear-gradient(180deg, #050b15, #2d5bac);
+  background-color: #0d0d0d;
   background-attachment: fixed;
 }
 
