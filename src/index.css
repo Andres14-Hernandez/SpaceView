@@ -7,10 +7,10 @@
 }
 
 :root{
-  --title-color: #1ECBE1;
+  --title-color: #dfdfdf;
   --text-color: #c4c3c3;
   --back-color: #012340;
-  --asset-color: #233a4c;
+  --asset-color: #232d34;
 }
 
 
@@ -23,7 +23,7 @@ body{
   background-attachment: fixed;
 }
 
-h1, h2, h3 ,h4 ,h5 h6{
+h1, h2, h3 ,h4{
   font-family: "Poppins", serif;
   font-optical-sizing: auto;
   font-weight: 600;
@@ -32,14 +32,26 @@ h1, h2, h3 ,h4 ,h5 h6{
   font-size: 60px;
 }
 
+h2{
+  font-size: 40px;
+}
+
+h3{
+  font-size: 30px;
+}
+
+h4{
+  font-size: 20px;
+}
+
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 5px;
 }
 ::-webkit-scrollbar-track {
   background: var(--asset-color);
 }
 ::-webkit-scrollbar-thumb {
-  background: #00899b;
+  background: #f0f9fa;
   border-radius: 3px;
   
 }

@@ -8,7 +8,7 @@ function Nav(){
         <ul className={styles.list}>
             <li>
                 <Link to='/'> 
-                    <img className={styles.logo} src='/images/logo-SpaceView.png' alt='logo' /> 
+                    <img className={styles.logo} src='/images/Logo.png' alt='logo' /> 
                 </Link> 
             </li>
 
@@ -17,7 +17,7 @@ function Nav(){
             </li>  
             
             <li>
-                <Link to='#'> TEST </Link> 
+                <Link to='/apod'> APOD </Link> 
             </li>               
         </ul>
             

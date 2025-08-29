@@ -19,8 +19,14 @@ function Galery() {
 
     return(
         <section>
-            <h1 className={styles.title}>Images</h1>
-                <Form onSearch={handleSearch} />
+            <h1>Images</h1>
+            <p>
+                The universe holds secrets in every corner… simple words can open windows to distant galaxies, 
+                hidden nebulae, or worlds yet to be discovered. Let your curiosity guide you and watch as space 
+                reveals what has been waiting to be found.
+            </p>
+
+            <Form onSearch={handleSearch} />
 
             <ul className={styles.galery}>
                 {items.map((item) => (
