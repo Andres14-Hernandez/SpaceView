@@ -1,21 +1,15 @@
 import styles from './Home.module.css'
-import useFetch from '../../Assets/useAPOD'
 
 
 function Home(){
 
-    const { data, loading, error } = useFetch()
-
     return(
-        <section>
-            <h1 className={styles.title}>Photo of the day</h1>
-
-            {loading && <p>Loading...</p>}
-            {error && <p>Error: {error}</p>}
-
-            <div className={styles.APODcontainer}>
-                <img src={data.url} alt={data.title}/>
-                <p> {data.explanation} </p>
+        <section className={styles.hero}>
+            <div className={styles.hero_content}>
+                <h1>Discover the Universe, One photo at a Time </h1>
+                <p>
+                    Unveil breathtaking photos and hidden stories from the cosmos. Search, explore, and let the universe surprise you.
+                </p>
             </div>
         </section>
     )

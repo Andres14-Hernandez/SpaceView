@@ -8,7 +8,7 @@ function APOD(){
 
     return(
         <section>
-            <h1 className={styles.title}>Photo of the day</h1>
+            <h1 className={styles.title}>Astronomy Picture of the Day</h1>
 
             {loading && <p>Loading...</p>}
             {error && <p>Error: {error}</p>}
