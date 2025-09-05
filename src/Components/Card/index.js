@@ -28,7 +28,7 @@ function ListItem({ title, description, imageUrl }){
   return (
     <>
       <li 
-        className={styles.card} 
+        className="card" 
         onClick={() => setIsModalOpen(true)}
         role="button"
         tabIndex={0}

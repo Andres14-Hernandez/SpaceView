@@ -8,7 +8,7 @@ function Nav(){
         <ul className={styles.list}>
             <li>
                 <Link to='/'> 
-                    <img className={styles.logo} src='/images/Logo.png' alt='logo' /> 
+                    <img className={styles.logo} src='/images/logo.png' alt='logo' /> 
                 </Link> 
             </li>
 
