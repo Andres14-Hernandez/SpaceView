@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 
 function useSpaceFlight(options = {}) {
-  const { limit = 10, search = "", offset = 0 } = options;
+  const { limit, search = "", offset = 0 } = options;
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

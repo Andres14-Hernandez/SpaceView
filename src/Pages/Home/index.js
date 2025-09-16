@@ -1,5 +1,5 @@
 import styles from './Home.module.css'
-import SpaceFlight from '../../Pages/SpaceFlight'
+import SpaceFlight from '../../Components/HomeArticles'
 
 
 function Home(){

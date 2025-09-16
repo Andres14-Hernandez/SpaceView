@@ -3,7 +3,7 @@
   color: #ffffff;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.6);
+  box-shadow: 0 6px 18px rgba(106, 105, 105, 0.5);
   transition: transform 220ms ease, box-shadow 220ms ease;
   display: flex;
   flex-direction: column;
@@ -16,14 +16,6 @@
   height: 100%;
   color: inherit;
   text-decoration: none;
-}
-
-.media {
-  width: 100%;
-  height: 160px;
-  overflow: hidden;
-  background: linear-gradient(180deg, #0f1724 0%, #061220 100%);
-  display: block;
 }
 
 .image {
@@ -90,7 +82,7 @@
 .card:hover,
 .card:focus-within {
   transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(2, 6, 23, 0.75);
+  box-shadow: 0 12px 30px rgba(221, 221, 221, 0.75);
 }
 
 .card:hover .image,
