@@ -1,0 +1,11 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 5rem;
+}
+
+.articles_section h1{
+    padding: 4%;
+    display: flex;
+    justify-content: center;
+}

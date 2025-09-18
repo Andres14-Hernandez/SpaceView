@@ -1,12 +1,11 @@
 .nav{
   position: fixed;     
-  top: 0;              
-  left: 0;
   width: 100%;         
   height: 60px;        
-  background: rgba(0, 0, 0, 0.8); 
-  backdrop-filter: blur(1px);    
+  background: rgba(0, 0, 0, 0.7); 
+  backdrop-filter: blur(3px);    
   display: flex;
+  justify-content: space-between;
   align-items: center;
   z-index: 1000;       
   padding: 0 2rem;
@@ -16,20 +15,23 @@
     width: 50px;
     height: 50px;
     object-fit: contain;
-
+    flex: 1;
 }
 
 .list{
     list-style: none;
-    padding: 10px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
+    padding: 10px;
     gap: 20px;
+    flex: 2;
+    padding-right: 50px;
 }
 
 .list a{
     text-decoration: none;
-    color: var(--text-color);
+    color: #FFFFFF;
     font-size: 25px;
 }

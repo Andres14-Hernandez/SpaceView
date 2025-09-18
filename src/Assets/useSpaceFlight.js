@@ -1,19 +1,27 @@
 import { useState, useEffect, useRef } from "react";
 
 function useSpaceFlight(options = {}) {
-  const { limit, search = "", offset = 0 } = options;
+  const {
+    limit,
+    search: initialSearch = "",
+    offset: initialOffset = 0,
+  } = options;
+
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const [searchTerm, setSearchTerm] = useState(initialSearch);
+  const [offset, setOffset] = useState(initialOffset);
+  const [reloadId, setReloadId] = useState(0);
 
   const controllerRef = useRef(null);
 
   useEffect(() => {
-
     if (controllerRef.current) {
       controllerRef.current.abort();
     }
+
     const controller = new AbortController();
     controllerRef.current = controller;
     const signal = controller.signal;
@@ -24,44 +32,56 @@ function useSpaceFlight(options = {}) {
 
       try {
         const params = new URLSearchParams();
-        params.append("limit", String(limit));
-        if (search) params.append("search", search);
+        if (limit != null) params.append("limit", String(limit));
+        if (searchTerm) params.append("search", searchTerm);
         if (offset) params.append("offset", String(offset));
-
         const url = `https://api.spaceflightnewsapi.net/v4/articles?${params.toString()}`;
-
         const res = await fetch(url, { signal });
         if (!res.ok) throw new Error(`HTTP error ${res.status}`);
         const data = await res.json();
 
         setArticles(Array.isArray(data.results) ? data.results : []);
-      } catch (err) {
-        if (err.name === "AbortError") {
-          return;
-        }
-        setError(err.message || "Unknown error");
+      } 
+      catch (err) {
+        if (err?.name === "AbortError") return;
+        setError(err?.message || "Unknown error");
         setArticles([]);
-      } finally {
+      } 
+      finally {
         setLoading(false);
       }
     };
 
     fetchArticles();
 
-
     return () => {
       controller.abort();
     };
+  }, [limit, searchTerm, offset, reloadId]);
 
-  }, [limit, search, offset]);
+  const doSearch = (payload) => {
+    if (typeof payload === "string") {
+      setSearchTerm(payload);
+    } 
+    else if (payload && typeof payload === "object" && "query" in payload) {
+      setSearchTerm(String(payload.query || ""));
+    } 
+    else {
+      setSearchTerm("");
+    }
 
-  const refresh = () => {
-    return { setArticles };
+    setOffset(0);
   };
 
-  return { articles, loading, error, setArticles, refresh };
+  const refresh = () => {
+    setReloadId((id) => id + 1);
+  };
+
+  const setNewOffset = (newOffset) => {
+    setOffset(newOffset);
+  };
+
+  return { articles, loading, error, setArticles, doSearch, refresh, setNewOffset, };
 }
-
-
 
 export default useSpaceFlight;
