@@ -1,14 +1,21 @@
-.nav{
+.header{
   position: fixed;     
   width: 100%;         
-  height: 60px;        
+  height: 64px;        
   background: rgba(0, 0, 0, 0.7); 
   backdrop-filter: blur(3px);    
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 1000;       
-  padding: 0 2rem;
+  padding: 0 2%;
+}
+
+.home{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    align-items: center;
 }
 
 .logo{
@@ -18,19 +25,18 @@
     flex: 1;
 }
 
-.list{
+.nav{
     list-style: none;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 10px 220px 10px 0;
     gap: 20px;
-    flex: 2;
-    padding-right: 50px;
+    flex: 1 1 auto;
 }
 
-.list a{
+.nav a{
     text-decoration: none;
     color: #FFFFFF;
     font-size: 25px;

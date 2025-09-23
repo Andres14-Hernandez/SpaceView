@@ -14,7 +14,8 @@ function Articles(){
 
     return(
         <main>
-            <Form onSearch={doSearch} />
+
+            <Form onSearch={doSearch} placeholder={'Search among the stars of knowledge...'} />
 
             <section className={styles.container} >
                 {loading && <div>Loading articles...</div>}

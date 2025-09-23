@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 
 
-function Form( {onSearch} ){
+function Form( {onSearch, placeholder} ){
 
   const [query, setQuery] = useState('');
   
@@ -22,14 +22,14 @@ function Form( {onSearch} ){
         <form onSubmit={handleSubmit} className={styles.form}>
           <input
             type="text"
-            placeholder="Explore the universe..."
+            placeholder={placeholder}
             value={query}
             onChange={(e) => setQuery(e.target.value)}
           />
       
-          <button type="submit" className={styles.button}>
+          {/* <button type="submit" className={styles.button}>
             Search
-          </button>
+          </button> */}
         </form>
       </div>
     );

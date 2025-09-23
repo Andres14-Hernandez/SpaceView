@@ -18,7 +18,7 @@ function Galery() {
     if(error) return <div className="error"> Error: {error}</div>;
 
     return(
-        <section>
+        <main>
             <h1>Images</h1>
             <p>
                 The universe holds secrets in every corner… simple words can open windows to distant galaxies, 
@@ -26,7 +26,7 @@ function Galery() {
                 reveals what has been waiting to be found.
             </p>
 
-            <Form onSearch={handleSearch} />
+            <Form onSearch={handleSearch} placeholder={'Explore the universe...'}/>
 
             <ul className={styles.galery}>
                 {items.map((item) => (
@@ -38,7 +38,7 @@ function Galery() {
                     />
                 ))}
             </ul>
-        </section>
+        </main>
     )
 }
 
