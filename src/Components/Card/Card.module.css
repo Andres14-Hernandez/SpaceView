@@ -103,6 +103,7 @@
 .modalTitle {
   font-size: 1.5rem;
   margin-bottom: 8px;
+  max-width: 90%;
 }
 
 .modalDescription {
@@ -124,5 +125,5 @@
 }
 
 .closeButton:hover {
-  color: #ff4c4c;
+  color: #fa6161;
 }

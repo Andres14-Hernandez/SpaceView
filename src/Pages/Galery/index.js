@@ -19,7 +19,7 @@ function Galery() {
 
     return(
         <main>
-            <h1>Images</h1>
+            <h1>Galery</h1>
             <p>
                 The universe holds secrets in every corner… simple words can open windows to distant galaxies, 
                 hidden nebulae, or worlds yet to be discovered. Let your curiosity guide you and watch as space 
