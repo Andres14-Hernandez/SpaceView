@@ -1,12 +1,23 @@
-.APODcontainer{
+.container{
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    gap: 50px;
-    margin-top: 40px;
+    gap: 100px;
+    padding: 3%;
 }
 
-.APODcontainer img{
-    max-width: 50%;
-    object-fit: contain;
+.imgContainer{
+    color: var(--title-color);
+    border-radius: 8px;
+    box-shadow: 0 3px 50px var(--primary-color);
+    transition: transform 220ms ease, box-shadow 220ms ease;
+
+}
+
+.imgContainer img{
+    max-height: 100vh;
+}
+
+.textContainer{
+    min-width: 35%;
+    overflow-y: auto;
 }
