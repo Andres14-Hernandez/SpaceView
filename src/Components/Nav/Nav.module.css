@@ -47,8 +47,7 @@
   color: var(--secondary-color);
 }
 
-
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .nav {
     position: absolute;
     right: 0;
@@ -57,8 +56,15 @@
     align-items: center;
     min-width: 180px;
   }
+
+
+}
+
+
+@media (max-width: 900px) {
+
   .nav a {
-    font-size: 20px;
+    font-size: 23px;
   }
 
 }
@@ -73,23 +79,15 @@
     gap: 12px;
   }
 
+  .nav a{
+    font-size: 20px;
+  }
+
   .logo {
     width: 40px;
     height: 40px;
   }
 
-}
-
-@media (max-width: 520px) {
-
-  .nav {
-    gap: 8px;
-    padding: 0 4%;
-  }
-
-  .nav a {
-    font-size: 16px;
-  }
 }
 
 @media (max-width: 520px) {
@@ -101,6 +99,11 @@
   .logo{
     width: 45px;
     height: 45px;
+  }
+  
+  .nav {
+    gap: 8px;
+    padding: 0 4%;
   }
 
 }
