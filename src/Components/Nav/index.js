@@ -6,7 +6,7 @@ function Nav(){
     <nav className={styles.header}>
         
         <div>
-        <Link className={styles.home} to='/'> 
+        <Link className={styles.linkHome} to='/'> 
             <img className={styles.logo} src='/images/logo.png' alt='logo' />
             <h3>SpaceView</h3> 
         </Link> 
