@@ -42,7 +42,7 @@
 
 .hero_content {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   max-width: 800px;
   padding: 20px;
 }
@@ -50,5 +50,21 @@
 @media (max-width: 900px) {
   .hero{
     height: 70vh;
+  }
+}
+
+
+@media (max-width: 750px) {
+  .hero_content h1{
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero_content h1{
+    font-size: 35px;
+  }
+  .hero_content p{
+    font-size: 20px;
   }
 }

@@ -14,7 +14,7 @@ function Nav(){
 
         <ul className={styles.nav}>
             <li>
-                <Link to='/images'> GALERY </Link> 
+                <Link to='/gallery'> GALLERY </Link> 
             </li>  
             
             <li>

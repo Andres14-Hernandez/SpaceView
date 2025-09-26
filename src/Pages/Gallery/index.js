@@ -1,11 +1,11 @@
-import styles from './Galery.module.css'
-import Form from '../../Components/Form'
-import Card from '../../Components/Card';
+import styles from './Gallery.module.css'
+import Form from '../../Components/Form/index.js'
+import Card from '../../Components/Card/index.js';
 import useApiNASA  from "../../Assets/useApiNASA.js";
 import { useState } from 'react';
 
 
-function Galery() {
+function Gallery() {
 
     const [searchParams, setSearchParams] = useState({ query: '' });
     const { items, loading, error } = useApiNASA(searchParams);
@@ -19,7 +19,7 @@ function Galery() {
 
     return(
         <main>
-            <h1>Galery</h1>
+            <h1 className={styles.galery}>Gallery</h1>
             <p>
                 The universe holds secrets in every corner… simple words can open windows to distant galaxies, 
                 hidden nebulae, or worlds yet to be discovered. Let your curiosity guide you and watch as space 
@@ -28,7 +28,7 @@ function Galery() {
 
             <Form onSearch={handleSearch} placeholder={'Explore the universe...'}/>
 
-            <ul className={styles.galery}>
+            <ul className={styles.galeryContainer}>
                 {items.map((item) => (
                     <Card
                         key={item.nasaId}
@@ -42,4 +42,4 @@ function Galery() {
     )
 }
 
-export default Galery
+export default Gallery
