@@ -7,7 +7,6 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 40px;
-  margin-top: 24px;
   width: 100%;
-  padding: 4%;
+  padding: 2% 4% 0 4%;
 }
