@@ -9,7 +9,10 @@ function Articles(){
     const { articles, loading, error, doSearch } = useSpaceFlight({ limit: 30 });
 
     return(
-        <main>
+        <main className={styles.main_container}>
+
+            <h1>Articles</h1>
+            <p>Explore the latest news from space agencies around the world and stay updated on their discoveries, missions, and breakthroughs.</p>
 
             <Form onSearch={doSearch} placeholder={'Search among the stars of knowledge...'} />
 

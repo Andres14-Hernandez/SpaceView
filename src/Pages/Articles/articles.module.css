@@ -1,8 +1,13 @@
+.main_container h1{
+  display: flex;
+  justify-content: center;
+}
+
 .articlesGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 40px;
   margin-top: 24px;
   width: 100%;
-  padding: 0;
+  padding: 4%;
 }

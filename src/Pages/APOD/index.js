@@ -8,7 +8,7 @@ function APOD(){
     return(
         <main className={styles.APOD}>
             <h1>Astronomy Picture of the Day</h1>
-            <p>The universe hide secrets than only reveal who take a new look</p>
+            <p>The universe hides infinite mysteries and every day reveals new secrets, offering glimpses of knowledge to those who keep exploring.</p>
 
             <section className={styles.container}>
                 {loading && <p>Loading...</p>}
@@ -22,7 +22,7 @@ function APOD(){
                     <h2>{data.title}</h2>
                     <p> {data.explanation} </p>
                 </article>
-                </section>
+            </section>
         </main>
     )
 } 
