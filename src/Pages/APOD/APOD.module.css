@@ -49,6 +49,11 @@
   overflow: auto;
 }
 
+@media (min-width: 2000px) {
+  .APOD h1{
+      margin-top: 60px;
+  }
+}
 
 @media (max-width: 880px) {
   .container {

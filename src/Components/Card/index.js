@@ -18,7 +18,7 @@ function Modal({ title, description, imageUrl, onClose }){
 
           <div className={styles.modalText}>
             {description && (
-              <p className={styles.modalDescription}>{description}</p>
+              <p>{description}</p>
             )}
           </div>
         </div>
@@ -28,7 +28,7 @@ function Modal({ title, description, imageUrl, onClose }){
 };
 
 
-function ListItem({ title, description, imageUrl }){
+function Card({ title, description, imageUrl }){
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   
@@ -38,7 +38,7 @@ function ListItem({ title, description, imageUrl }){
           <div className={styles.imageWrapper}>
             <img src={imageUrl} alt={title} className={styles.cardImage} />
          </div>
-        <h3 className={styles.cardTitle}>{title}</h3>
+        <h3>{title}</h3>
       </div>
 
       {isModalOpen && (
@@ -54,4 +54,4 @@ function ListItem({ title, description, imageUrl }){
 };
 
 
-export default ListItem
+export default Card

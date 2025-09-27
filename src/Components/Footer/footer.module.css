@@ -53,6 +53,27 @@
   color: #ff4c4c;
 }
 
+@media (min-width: 2000px) {
+  .logo{
+    width: 100px;
+    height: 100px;
+  }
+
+  .logoText{
+    margin-top: 15px;
+    font-size: 30px;
+  }
+
+  .copy{
+    font-size: 20px;
+  }
+  
+  .socials a{
+    font-size: 2rem;
+  }
+}
+
+
 @media (min-width: 768px) {
   .footerContent {
     flex-direction: row;
@@ -63,4 +84,5 @@
   .logoSection {
     align-items: flex-start;
   }
+
 }

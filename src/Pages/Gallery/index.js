@@ -18,8 +18,8 @@ function Gallery() {
     if(error) return <div className="error"> Error: {error}</div>;
 
     return(
-        <main>
-            <h1 className={styles.galery}>Gallery</h1>
+        <main className={styles.gallery}>
+            <h1>Gallery</h1>
             <p>
                 The universe holds secrets in every corner… simple words can open windows to distant galaxies, 
                 hidden nebulae, or worlds yet to be discovered. Let your curiosity guide you and watch as space 
@@ -28,7 +28,7 @@ function Gallery() {
 
             <Form onSearch={handleSearch} placeholder={'Explore the universe...'}/>
 
-            <ul className={styles.galeryContainer}>
+            <ul className={styles.galleryContainer}>
                 {items.map((item) => (
                     <Card
                         key={item.nasaId}

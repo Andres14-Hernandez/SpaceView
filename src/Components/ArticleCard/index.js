@@ -15,7 +15,7 @@ function ArticleCard({ article }) {
         )}
 
         <div className={styles.content}>
-          <h3 className={styles.title}>{title}</h3>
+          <h3>{title}</h3>
           <p className={styles.summary}>{summary}</p>
           <div className={styles.meta}>
             <span className={styles.source}>{news_site}</span>
