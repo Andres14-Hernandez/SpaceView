@@ -6,7 +6,7 @@ SpaceView is a web application that allows users to explore and search for image
 
 - Keyword-based search.   
 - Display of results in an interactive gallery.  
-- Integration with NASA’s official API to fetch updated content.  
+- Integration with NASA’s official API and spaceflight API to fetch updated content.  
 - Simple and responsive interface.  
 
 # Installation
