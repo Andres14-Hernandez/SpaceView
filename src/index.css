@@ -30,7 +30,8 @@ h1, h2, h3 ,h4{
   font-weight: 600;
   font-style: normal;
   color: var(--title-color);
-  font-size: 60px;
+    font-size: 60px;
+
 }
 
 h2{
@@ -44,6 +45,7 @@ h3{
 h4{
   font-size: 20px;
 }
+
 
 ::-webkit-scrollbar {
   width: 5px;
@@ -66,6 +68,34 @@ code {
     monospace;
 }
 
+
+@media (min-width: 1950px) {
+    
+  h1{
+    font-size: 80px;
+  }
+
+  h2{
+    font-size: 60px;
+  }
+
+  body{
+    font-size: 40px;
+  }
+
+}
+
+@media (max-width: 2000px) {
+
+}
+
+
+@media (max-width: 750px) {
+  .hero_content h1{
+    font-size: 40px;
+  }
+}
+
 @media (max-width: 500px) {
     
   h1{
@@ -80,4 +110,10 @@ code {
     font-size: 20px;
   }
 
+}
+
+@media (max-width: 400px) {
+  .hero_content h1{
+    font-size: 35px;
+  }
 }

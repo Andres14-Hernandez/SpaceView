@@ -17,11 +17,9 @@ function SpaceFlight(){
             <div className={styles.container} >
                 {articles.map((a) => (
                 <ArticleCard key={a.id} article={a} />))}
-            </div>
-            
+            </div>            
         </section>
     )
-
 }
 
 export default SpaceFlight;
