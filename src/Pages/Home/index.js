@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./Home.module.css";
+import HomeArticles from '../../Components/HomeArticles'
 
 const IMAGES = [
   "/images/hero1.jpg",
@@ -20,7 +21,7 @@ function shuffleArray(array) {
   return a;
 }
 
-export default function Hero({ intervalMs = 15000, minToStart = 2, maxWaitMs = 5000 }) {
+export default function Hero({ intervalMs = 5000, minToStart = 2, maxWaitMs = 5000 }) {
   const [images, setImages] = useState([]);
   const [index, setIndex] = useState(0);
   const startedRef = useRef(false);
@@ -114,23 +115,30 @@ export default function Hero({ intervalMs = 15000, minToStart = 2, maxWaitMs = 5
   }
 
   return (
-    <section className={styles.hero}>
-      <div className={styles.slides}>
-        {images.map((src, i) => (
-          <img
-            key={src + i}
-            src={src}
-            alt={`Hero ${i + 1}`}
-            className={`${styles.slide} ${i === index ? styles.visible : ""}`}
-            draggable={false}
-          />
-        ))}
-      </div>
 
-      <div className={styles.hero_content}>
-        <h1>Discover the Universe, One Photo at a Time</h1>
-        <p>Unveil breathtaking photos and hidden stories from the cosmos.</p>
-      </div>
-    </section>
+    <main>
+      <section className={styles.hero}>
+        <div className={styles.slides}>
+          {images.map((src, i) => (
+            <img
+              key={src + i}
+              src={src}
+              alt={`Hero ${i + 1}`}
+              className={`${styles.slide} ${i === index ? styles.visible : ""}`}
+              draggable={false}
+            />
+          ))}
+        </div>
+
+        <div className={styles.hero_content}>
+          <h1>Discover the Universe, One Photo at a Time</h1>
+          <p>Unveil breathtaking photos and hidden stories from the cosmos.</p>
+        </div>
+      </section>
+
+      <section>
+        <HomeArticles/>
+      </section>
+    </main>
   );
 }
