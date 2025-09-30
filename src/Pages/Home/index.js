@@ -87,19 +87,7 @@ export default function Hero({ intervalMs = 5000, minToStart = 2, maxWaitMs = 50
         img.onerror = () => markFail();
       }
     });
-
-
-    const fallback = setTimeout(() => {
-      if (!started) {
-        console.warn("[Hero] Fallback: starting slideshow after wait (ok/failed):", okCount, failCount);
-        startCycle();
-      }
-    }, maxWaitMs);
-
-    return () => {
-      clearTimeout(timerRef.current);
-      clearTimeout(fallback);
-    };
+    
   }, [intervalMs, minToStart, maxWaitMs]);
 
 

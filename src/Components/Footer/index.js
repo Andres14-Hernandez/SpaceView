@@ -5,15 +5,15 @@ function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContent}>
-        <div className={styles.logoSection}>
+        <div className={styles.returnHome}>
+          <Link to ="/">
             <img className={styles.logo} src='/images/logo.png' alt='logo' />
-            <div className={styles.logoText}>
-                <Link to="/" className={styles.logoText}>
-              SpaceView
-                </Link>
-                <p className={styles.copy}>
-                  © {new Date().getFullYear()} SpaceView. All rights reserved.
-                </p>    
+          </Link>
+          <div>
+            <Link to="/" className={styles.link}> SpaceView </Link>
+              <p className={styles.copy}>
+                © {new Date().getFullYear()} SpaceView. All rights reserved.
+              </p>    
             </div>
         </div>
 
