@@ -20,26 +20,12 @@ Install dependencies.
 
 Start the application: npm start
 
-Usage 
-
-Enter a keyword in the search form.
-
-Click on "Search" to view the results in the gallery.
-
-
-Project Structure
-
-src/Components/Form: Component to capture search input.
-
-src/Components/Card: Component to display each gallery result.
-
-src/Pages/Galery: Main page where the form and gallery are rendered.
-
-src/Assets/useApiNASA.js: Custom hook to consume NASA’s API.
 
 Credits
 
 NASA Open API
+
+SpaceFlight API
 
 Developed by Andrés Hernández
 
